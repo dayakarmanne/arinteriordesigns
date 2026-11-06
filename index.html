@@ -145,7 +145,7 @@ footer{border-top:1px solid rgba(212,175,55,.25)}
       <img src="https://res.cloudinary.com/ofiyq8xe/image/upload/v1793731952/WhatsApp_Image_2026-11-03_at_11.57.46_PM.jpg" alt="AR Interior Designing logo" class="navlogo">
       <span>AR INTERIOR DESIGNING</span>
     </a>
-    <button id="menuBtn" class="lg:hidden text-3xl text-yellow-300" aria-label="Toggle navigation" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <button id="menuBtn" class="lg:hidden text-3xl text-yellow-300" aria-label="Toggle navigation" aria-expanded="false" aria-controls="menu">☰</button>
     <ul id="menu" class="hidden lg:flex items-center gap-7 text-sm font-medium">
       <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#branches">Branches</a></li><li><a href="#contact">Contact</a></li>
     </ul>
@@ -178,7 +178,7 @@ footer{border-top:1px solid rgba(212,175,55,.25)}
   <div class="max-w-7xl mx-auto glass p-6 sm:p-9 md:p-12">
     <div class="about-clean">
       <div class="about-photo">
-        <img src="https://res.cloudinary.com/ofiyq8xe/image/upload/v1793982247/WhatsApp_Image_2026-11-05_at_6.59.55_PM.jpg" alt="Mr. Manikanta, Founder and CEO of AR Interior Designing" loading="lazy">
+        <img src="https://res.cloudinary.com/ofiyq8xe/image/upload/v1793987422/WhatsApp_Image_2026-11-06_at_11.17.40_PM.jpg" alt="Mr. Manikanta, Founder and CEO of AR Interior Designing" loading="lazy">
       </div>
       <div class="about-copy">
         <p class="text-xs tracking-[.25em] uppercase text-yellow-200">The people behind the spaces</p>
@@ -186,7 +186,7 @@ footer{border-top:1px solid rgba(212,175,55,.25)}
         <p class="text-stone-200 text-lg leading-relaxed">AR Interior Designing was established in January 2024 with a simple purpose: to create beautiful, functional spaces that feel personal to the people who live in them.</p>
         <p class="mt-4 leading-relaxed">From modular kitchens and custom wardrobes to elegant ceilings and thoughtfully designed living spaces, our team brings together practical planning, refined aesthetics and careful execution.</p>
         <div class="ceo-marquee" aria-label="Founder and CEO, Mr. Manikanta">
-          <div class="ceo-marquee-track"><span>Founder &amp; CEO <b>Mr. Manikanta</b> ✦ AR Interior Designing ✦</span><span>Founder &amp; CEO <b>Mr. Manikanta</b> ✦ AR Interior Designing ✦</span></div>
+          <div class="ceo-marquee-track"><span>Founder & CEO <b>Mr. Manikanta</b> ✦ AR Interior Designing ✦</span><span>Founder & CEO <b>Mr. Manikanta</b> ✦ AR Interior Designing ✦</span></div>
         </div>
         <p class="leading-relaxed">With a founder-led approach, <strong class="gold-text">Mr. Manikanta</strong> guides the studio's vision and commitment to thoughtful design, dependable service and quality craftsmanship. We welcome clients at our Beeramguda and Gachibowli locations.</p>
         <div class="about-orbit" aria-label="Our design values"><span>✦ Personalised design</span><span>✦ Fine craftsmanship</span><span>✦ Functional spaces</span><span>✦ Client-first service</span></div>
@@ -239,11 +239,11 @@ footer{border-top:1px solid rgba(212,175,55,.25)}
   <p class="text-stone-300 text-xs sm:text-sm mt-3 tracking-[.2em]">MESSAGE YOUR DREAMS, OUR CARE</p>
   <div class="w-32 h-px mx-auto my-6" style="background:linear-gradient(90deg,transparent,#d4af37,transparent)"></div>
   <p class="text-sm"><a href="#home">Home</a> &nbsp; <a href="#about">About</a> &nbsp; <a href="#portfolio">Portfolio</a> &nbsp; <a href="#contact">Contact</a></p>
-  <p class="text-xs text-stone-500 mt-5">&copy; <span id="yr"></span> AR Interior Designing. All rights reserved.</p>
+  <p class="text-xs text-stone-500 mt-5">© <span id="yr"></span> AR Interior Designing. All rights reserved.</p>
 </footer>
 
 <div id="lb" class="hidden" role="dialog" aria-modal="true" aria-label="Portfolio video preview">
-  <button aria-label="Close preview">&times;</button><div id="lbcontent"></div><p id="lbcap" class="font-display gold-text mt-5 text-xl text-center"></p>
+  <button aria-label="Close preview">×s</button><div id="lbcontent"></div><p id="lbcap" class="font-display gold-text mt-5 text-xl text-center"></p>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -264,12 +264,12 @@ footer{border-top:1px solid rgba(212,175,55,.25)}
   menuBtn.addEventListener('click', () => {
     const open = menu.classList.toggle('open');
     menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.innerHTML = open ? '&times;' : '&#9776;';
+    menuBtn.innerHTML = open ? '×' : '☰';
   });
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     menu.classList.remove('open');
     menuBtn.setAttribute('aria-expanded', 'false');
-    menuBtn.innerHTML = '&#9776;';
+    menuBtn.innerHTML = '☰';
   }));
 
   // Portfolio media
