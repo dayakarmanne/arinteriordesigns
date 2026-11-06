@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+<title>AR Interior Designing | Beeramguda & Gachibowli, Telangana</title>
+<meta name="description" content="Luxury interior design studio in Hyderabad. Message your dreams, our care.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root{--gold:#D4AF37;--gold-glow:#F3DC8A;--gold-dark:#997A15;--obs:#050505;--muted:#d1d5db}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--obs);color:#e7e5e4;font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse at 50% 15%,rgba(212,175,55,.055),transparent 55%)}
+#global-bg{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+header,main,footer{position:relative;z-index:2}
+.font-display{font-family:'Cinzel',serif}
+.gold-text{background:linear-gradient(135deg,#ffe99a 0%,#d4af37 48%,#997a15 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 16px rgba(212,175,55,.22))}
+.h2{font-family:'Cinzel',serif;font-size:clamp(2rem,4.5vw,3.25rem);font-weight:700;line-height:1.2;margin:0 0 1.5rem;background:linear-gradient(135deg,#ffe99a,#d4af37 55%,#997a15);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 16px rgba(212,175,55,.22))}
+p,li,small{color:var(--muted)}
+.glass{background:rgba(10,10,10,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(212,175,55,.28);border-radius:24px;box-shadow:0 15px 45px rgba(0,0,0,.28),inset 0 0 18px rgba(212,175,55,.035)}
+.sec{padding:7rem 1.5rem;position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:1rem 2.2rem;border:1px solid var(--gold-glow);color:#080808;background:linear-gradient(135deg,#f3dc8a,#d4af37 55%,#997a15);border-radius:999px;font-weight:700;box-shadow:0 0 25px rgba(212,175,55,.25);transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 38px rgba(243,220,138,.48)}
+.chip{padding:.55rem 1.25rem;border:1px solid rgba(212,175,55,.4);border-radius:999px;color:#eee;background:rgba(10,10,10,.7);font-size:.9rem;transition:.25s}
+.chip.on,.chip:hover{background:linear-gradient(135deg,var(--gold-glow),var(--gold-dark));color:#080808;border-color:var(--gold-glow)}
+header{background:rgba(5,5,5,.88);border-bottom:1px solid rgba(212,175,55,.25);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.navlogo{width:44px;height:44px;object-fit:contain;border-radius:50%;border:1px solid var(--gold)}
+nav a{color:#ddd;font-size:.95rem;font-weight:500;transition:color .25s,text-shadow .25s}
+nav a:hover{color:var(--gold-glow);text-shadow:0 0 12px rgba(212,175,55,.5)}
+#menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(5,5,5,.98);padding:1.5rem;gap:1rem;border-bottom:1px solid rgba(212,175,55,.3)}
+#home{min-height:100svh;isolation:isolate;background:url('https://res.cloudinary.com/ofiyq8xe/image/upload/v1793983291/interir_design_bg.png') center/cover no-repeat}
+#home::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.38),rgba(0,0,0,.72))}
+.hero-content{position:relative;z-index:2;max-width:1100px}
+.hero-kicker{display:inline-block;border:1px solid rgba(243,220,138,.5);border-radius:999px;padding:.45rem 1rem;background:rgba(0,0,0,.42);letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:#f3dc8a}
+.tile{position:relative;aspect-ratio:4/3;border-radius:20px;overflow:hidden;cursor:pointer;border:1px solid rgba(212,175,55,.3);transition:transform .3s,border-color .3s,box-shadow .3s;background:#111}
+.tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.tile:hover video{transform:scale(1.08)}
+.tile::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.85));pointer-events:none}
+.tile span{position:absolute;left:1.1rem;bottom:1rem;z-index:2;font-family:'Cinzel',serif;font-weight:700;color:#ffe08a;text-shadow:0 2px 12px #000}
+.tile:hover{border-color:var(--gold-glow);box-shadow:0 18px 50px rgba(212,175,55,.2)}
+.about-card{overflow:hidden}
+.ceo-image-wrapper{position:relative;aspect-ratio:4/5;max-width:440px;margin:auto;border-radius:22px;overflow:hidden;border:1px solid rgba(212,175,55,.48);box-shadow:0 0 32px rgba(212,175,55,.15)}
+.ceo-image-wrapper>img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .8s}
+.ceo-image-wrapper:hover>img{transform:scale(1.045)}
+.ceo-caption{position:absolute;inset:auto 0 0;padding:3rem 1rem 1.25rem;text-align:center;background:linear-gradient(transparent,rgba(0,0,0,.96))}
+.ceo-caption p{margin:0}
+.rotary-badge{position:absolute;top:14px;right:14px;width:86px;height:86px;z-index:4;pointer-events:none;animation:badgeSpin 16s linear infinite}
+.rotary-badge svg{width:100%;height:100%;overflow:visible}
+.rotary-badge text{font:700 10px 'Cinzel',serif;letter-spacing:1.4px;fill:#ffe99a}
+@keyframes badgeSpin{to{transform:rotate(360deg)}}
+.ceo-info-wheel{width:min(100%,270px);aspect-ratio:1;margin:2rem auto 0;position:relative;display:grid;place-items:center}
+.ceo-info-wheel .wheel-ring{position:absolute;inset:0;border:1px solid rgba(212,175,55,.65);border-radius:50%;box-shadow:0 0 24px rgba(212,175,55,.12),inset 0 0 22px rgba(212,175,55,.07);animation:orbitSpin 24s linear infinite}
+.ceo-info-wheel .wheel-ring::before,.ceo-info-wheel .wheel-ring::after{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--gold-glow);box-shadow:0 0 15px var(--gold);top:12%;left:18%}
+.ceo-info-wheel .wheel-ring::after{top:auto;left:auto;right:12%;bottom:18%;width:7px;height:7px}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.wheel-center{position:relative;z-index:1;width:66%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;padding:1rem;background:radial-gradient(circle,rgba(212,175,55,.16),rgba(0,0,0,.95) 70%);border:1px solid rgba(243,220,138,.45)}
+.wheel-label{position:absolute;z-index:2;padding:.42rem .7rem;border:1px solid rgba(212,175,55,.5);border-radius:999px;background:rgba(5,5,5,.92);font-size:.66rem;letter-spacing:.08em;color:#f3dc8a;white-space:nowrap;box-shadow:0 0 15px rgba(212,175,55,.12)}
+.wheel-label.l1{top:2%;left:50%;transform:translateX(-50%)}
+.wheel-label.l2{right:-5%;top:48%}
+.wheel-label.l3{bottom:2%;left:50%;transform:translateX(-50%)}
+.wheel-label.l4{left:-5%;top:48%}
+.ceo-highlight{border-left:2px solid var(--gold);padding-left:1rem;margin-top:1rem}
+.stat-number{font-family:'Cinzel',serif;color:#f3dc8a;font-size:clamp(2rem,4vw,3.5rem);font-weight:700}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;text-align:left}
+.cbtn{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.25rem;border:1px solid rgba(212,175,55,.35);border-radius:16px;background:rgba(15,15,15,.78);transition:.3s;min-width:0}
+.cbtn svg{flex:none;stroke:var(--gold)}
+.cbtn .cl{display:flex;flex-direction:column;min-width:0}
+.cbtn .cl b{color:#fef08a;font-size:1rem}
+.cbtn .cl small{overflow-wrap:anywhere;font-size:.85rem}
+.cbtn:hover{transform:translateY(-4px);background:linear-gradient(135deg,#f3dc8a,#997a15);box-shadow:0 0 28px rgba(212,175,55,.35)}
+.cbtn:hover svg{stroke:#080808}
+.cbtn:hover .cl b,.cbtn:hover .cl small{color:#080808}
+iframe{width:100%;height:290px;border:1px solid rgba(212,175,55,.4);border-radius:16px;filter:grayscale(.2) contrast(.95)}
+#lb{position:fixed;inset:0;z-index:150;background:rgba(0,0,0,.96);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem}
+#lb.hidden{display:none}
+#lb button{position:absolute;top:1rem;right:1.5rem;font-size:3rem;color:var(--gold);background:none;border:0;cursor:pointer}
+#lbvideo{width:min(92vw,1000px);aspect-ratio:16/10;border-radius:18px;border:1px solid var(--gold);object-fit:cover}
+#preloader{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;flex-direction:column;background:#050505;overflow:hidden}
+.preloader-content{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem}
+ .coin-stage{width:min(68vw,230px);height:min(68vw,230px);perspective:1200px;display:grid;place-items:center;margin-bottom:1.5rem}
+.coin{width:100%;height:100%;position:relative;transform-style:preserve-3d;animation:coinFlip 4.2s cubic-bezier(.45,.05,.55,.95) infinite}
+.coin-face{position:absolute;inset:0;backface-visibility:hidden;display:grid;place-items:center;border-radius:24px;padding:12px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.55));border:1px solid rgba(243,220,138,.8);box-shadow:0 0 45px rgba(212,175,55,.22),inset 0 0 25px rgba(212,175,55,.08)}
+.coin-face img{width:100%;height:100%;object-fit:contain;border-radius:16px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.5))}
+.coin-face.back{transform:rotateY(180deg)}
+@keyframes coinFlip{0%{transform:rotateY(0) rotateX(-5deg)}50%{transform:rotateY(180deg) rotateX(5deg)}100%{transform:rotateY(360deg) rotateX(-5deg)}}
+/* Clean founder-led about section */
+.about-clean{max-width:1120px;margin:auto;display:grid;grid-template-columns:minmax(250px,.82fr) minmax(0,1.18fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.about-photo{position:relative;max-width:390px;width:100%;margin:auto;aspect-ratio:4/5;overflow:hidden;border-radius:18px;border:1px solid rgba(212,175,55,.48);background:#111;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .7s}
+.about-photo:hover img{transform:scale(1.035)}
+.about-photo::after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.82));pointer-events:none}
+.about-copy{min-width:0}
+.ceo-marquee{overflow:hidden;border-block:1px solid rgba(212,175,55,.35);background:rgba(212,175,55,.07);padding:.75rem 0;margin:1.5rem 0}
+.ceo-marquee-track{display:flex;width:max-content;animation:marqueeSlide 22s linear infinite}
+.ceo-marquee-track span{white-space:nowrap;padding:0 1.5rem;color:#f3dc8a;font-family:'Cinzel',serif;font-size:.9rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.ceo-marquee-track span b{color:#fff1b8}
+@keyframes marqueeSlide{to{transform:translateX(-50%)}}
+.about-orbit{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.5rem}
+.about-orbit span{border:1px solid rgba(212,175,55,.35);border-radius:999px;padding:.48rem .85rem;color:#f3dc8a;font-size:.78rem;letter-spacing:.04em;background:rgba(212,175,55,.055);animation:softFloat 4s ease-in-out infinite}
+.about-orbit span:nth-child(2){animation-delay:.4s}.about-orbit span:nth-child(3){animation-delay:.8s}.about-orbit span:nth-child(4){animation-delay:1.2s}
+@keyframes softFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media(max-width:767px){.coin-stage{width:180px;height:180px}.about-clean{grid-template-columns:1fr;gap:2rem}.about-photo{max-width:300px}.ceo-marquee-track span{font-size:.76rem}}
+.loader-track{width:min(260px,70vw);height:3px;background:rgba(212,175,55,.18);border-radius:9px;overflow:hidden;margin-top:1.3rem}
+.loader-progress{height:100%;width:0;background:linear-gradient(90deg,#997a15,#ffe99a);box-shadow:0 0 12px #d4af37}
+.loader-percent{font-size:.72rem;letter-spacing:.2em;color:#d9bd65;margin-top:.65rem}
+#orb,.trail{position:fixed;top:0;left:0;pointer-events:none;z-index:250;border-radius:50%;transform:translate(-50%,-50%)}
+#orb{width:14px;height:14px;background:radial-gradient(#fff3bd,#d4af37);box-shadow:0 0 22px 6px rgba(212,175,55,.65)}
+.trail{width:5px;height:5px;background:#f3dc8a;box-shadow:0 0 9px rgba(212,175,55,.7)}
+footer{border-top:1px solid rgba(212,175,55,.25)}
+@media(min-width:1024px){#menu.open{position:static;flex-direction:row;padding:0;background:none;border:0}}
+@media(max-width:767px){.sec{padding:4.5rem 1.1rem}#home{background-position:58% center}.coin-stage{width:128px;height:128px}.coin{width:108px;height:108px}.ceo-info-wheel{width:235px}.wheel-label{font-size:.58rem}.wheel-label.l2{right:-2%}.wheel-label.l4{left:-2%}iframe{height:230px}}
+@media(hover:none){#orb,.trail{display:none}}
+@media(prefers-reduced-motion:reduce){.ceo-marquee-track,.about-orbit span{animation:none!important}html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}#orb,.trail{display:none!important}}
+</style>
+</head>
+<body>
+<canvas id="global-bg" aria-hidden="true"></canvas>
+
+<!-- Gold coin preloader -->
+<div id="preloader" role="status" aria-label="Loading AR Interior Designing">
+  <div class="preloader-content">
+    <div class="coin-stage">
+      <div class="coin" aria-hidden="true">
+        <div class="coin-face"><img src="https://res.cloudinary.com/ofiyq8xe/image/upload/v1793731952/WhatsApp_Image_2026-11-03_at_11.57.46_PM.jpg" alt=""></div>
+        <div class="coin-face back"><img src="https://res.cloudinary.com/ofiyq8xe/image/upload/v1793731952/WhatsApp_Image_2026-11-03_at_11.57.46_PM.jpg" alt=""></div>
+      </div>
+    </div>
+    <p class="font-display gold-text tracking-widest text-sm sm:text-base font-bold">AR INTERIOR DESIGNING</p>
+    <p class="text-xs tracking-widest mt-2">MESSAGE YOUR DREAMS, OUR CARE</p>
+    <div class="loader-track"><div class="loader-progress"></div></div>
+    <div class="loader-percent">0%</div>
+  </div>
+</div>
+
+<div id="orb" aria-hidden="true"></div>
+
+<header class="fixed top-0 inset-x-0 z-40">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 sm:px-6 py-3">
+    <a href="#home" class="font-display gold-text text-sm sm:text-lg xl:text-xl flex items-center gap-3 font-bold">
+      <img src="https://res.cloudinary.com/ofiyq8xe/image/upload/v1793731952/WhatsApp_Image_2026-11-03_at_11.57.46_PM.jpg" alt="AR Interior Designing logo" class="navlogo">
+      <span>AR INTERIOR DESIGNING</span>
+    </a>
+    <button id="menuBtn" class="lg:hidden text-3xl text-yellow-300" aria-label="Toggle navigation" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <ul id="menu" class="hidden lg:flex items-center gap-7 text-sm font-medium">
+      <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#branches">Branches</a></li><li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="relative min-h-screen flex items-center justify-center text-center px-5 pt-24">
+  <div class="hero-content">
+    <span class="hero-kicker">Luxury spaces · Thoughtful living</span>
+    <h1 class="font-display gold-text text-4xl sm:text-6xl lg:text-8xl leading-tight font-bold mt-7">AR INTERIOR DESIGNING</h1>
+    <p class="font-display italic text-xl sm:text-2xl md:text-3xl mt-5 gold-text font-semibold">Message your dreams, our care</p>
+    <p class="max-w-2xl mx-auto mt-5 text-base sm:text-lg text-stone-200">Beautifully considered interiors, crafted around the way you live.</p>
+    <a class="btn mt-9" data-wa href="#">Book Consultation</a>
+  </div>
+</section>
+
+<section id="portfolio" class="sec">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-wrap items-end justify-between gap-4"><div><p class="text-xs tracking-[.28em] uppercase text-yellow-200">Selected work</p><h2 class="h2">Our Portfolio</h2></div><p class="max-w-xl">Explore spaces shaped by detail, function and timeless style.</p></div>
+    <div class="flex flex-wrap gap-3 my-8" id="filters">
+      <button class="chip on" data-f="all">All</button><button class="chip" data-f="Kitchen">Kitchens</button><button class="chip" data-f="Living">Living</button><button class="chip" data-f="Bedroom">Bedrooms</button><button class="chip" data-f="Ceiling">Ceilings</button>
+    </div>
+    <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <p class="text-sm text-stone-300 mt-6">Explore our interior concepts and selected project visuals.</p>
+  </div>
+</section>
+
+<section id="about" class="sec">
+  <div class="max-w-7xl mx-auto glass p-6 sm:p-9 md:p-12">
+    <div class="about-clean">
+      <div class="about-photo">
+        <img src="https://res.cloudinary.com/ofiyq8xe/image/upload/v1793982247/WhatsApp_Image_2026-11-05_at_6.59.55_PM.jpg" alt="Mr. Manikanta, Founder and CEO of AR Interior Designing" loading="lazy">
+      </div>
+      <div class="about-copy">
+        <p class="text-xs tracking-[.25em] uppercase text-yellow-200">The people behind the spaces</p>
+        <h2 class="h2 mt-2 mb-3">A little about us</h2>
+        <p class="text-stone-200 text-lg leading-relaxed">AR Interior Designing was established in January 2024 with a simple purpose: to create beautiful, functional spaces that feel personal to the people who live in them.</p>
+        <p class="mt-4 leading-relaxed">From modular kitchens and custom wardrobes to elegant ceilings and thoughtfully designed living spaces, our team brings together practical planning, refined aesthetics and careful execution.</p>
+        <div class="ceo-marquee" aria-label="Founder and CEO, Mr. Manikanta">
+          <div class="ceo-marquee-track"><span>Founder &amp; CEO <b>Mr. Manikanta</b> ✦ AR Interior Designing ✦</span><span>Founder &amp; CEO <b>Mr. Manikanta</b> ✦ AR Interior Designing ✦</span></div>
+        </div>
+        <p class="leading-relaxed">With a founder-led approach, <strong class="gold-text">Mr. Manikanta</strong> guides the studio's vision and commitment to thoughtful design, dependable service and quality craftsmanship. We welcome clients at our Beeramguda and Gachibowli locations.</p>
+        <div class="about-orbit" aria-label="Our design values"><span>✦ Personalised design</span><span>✦ Fine craftsmanship</span><span>✦ Functional spaces</span><span>✦ Client-first service</span></div>
+        <a href="#contact" class="btn mt-7">Discuss your project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="sec pt-0">
+  <div class="max-w-7xl mx-auto grid sm:grid-cols-3 gap-5 text-center">
+    <div class="glass p-8"><p class="stat-number"><span class="count" data-n="500">0</span>+</p><p class="mt-2">Happy customers*</p></div>
+    <div class="glass p-8"><p class="stat-number">Jan 2024</p><p class="mt-2">Studio founded</p></div>
+    <div class="glass p-8"><p class="stat-number"><span class="count" data-n="2">0</span></p><p class="mt-2">Showrooms in Telangana</p></div>
+  </div>
+</section>
+
+<section id="reviews" class="sec">
+  <div class="max-w-7xl mx-auto"><div class="text-center"><p class="text-xs tracking-[.28em] uppercase text-yellow-200">Experiences</p><h2 class="h2">Client Reviews</h2></div><div class="grid md:grid-cols-3 gap-6 mt-10" id="rev"></div><p class="text-xs text-stone-500 mt-5 text-center">Please publish only genuine, permissioned customer testimonials.</p></div>
+</section>
+
+<section id="branches" class="sec">
+  <div class="max-w-7xl mx-auto"><div class="text-center"><p class="text-xs tracking-[.28em] uppercase text-yellow-200">Visit us</p><h2 class="h2">Our Showrooms</h2></div>
+    <div class="grid md:grid-cols-2 gap-7 mt-10">
+      <article class="glass p-6 sm:p-8"><h3 class="font-display gold-text text-2xl font-bold">Beeramguda</h3><p class="mb-5 mt-1">Headquarters and Experience Center</p><iframe loading="lazy" title="Beeramguda map" src="https://www.google.com/maps?q=Beeramguda,Hyderabad&output=embed"></iframe><a class="text-yellow-200 underline text-sm inline-block mt-4" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Beeramguda+Hyderabad">Get directions</a></article>
+      <article class="glass p-6 sm:p-8"><h3 class="font-display gold-text text-2xl font-bold">Gachibowli</h3><p class="mb-5 mt-1">Branch Studio</p><iframe loading="lazy" title="Gachibowli map" src="https://www.google.com/maps?q=Gachibowli,Hyderabad&output=embed"></iframe><a class="text-yellow-200 underline text-sm inline-block mt-4" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Gachibowli+Hyderabad">Get directions</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="max-w-4xl mx-auto glass p-7 sm:p-10 md:p-14 text-center">
+    <p class="text-xs tracking-[.28em] uppercase text-yellow-200">Let's create something beautiful</p><h2 class="h2 mt-2">Book Your Consultation</h2>
+    <p class="text-lg mt-3 mb-7">Speak with our design team and bring your dream home to life.</p>
+    <a class="btn" data-wa href="#">Chat on WhatsApp</a>
+    <div class="cgrid mt-10">
+      <a class="cbtn" href="tel:+917569954319"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="cl"><b>Call us</b><small>7569954319</small></span></a>
+      <a class="cbtn" href="mailto:arinrteriordesigning@gmail.com"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span class="cl"><b>Email us</b><small>arinrteriordesigning@gmail.com</small></span></a>
+      <a class="cbtn" href="https://instagram.com/arinteriordesign" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><span class="cl"><b>Instagram</b><small>@arinteriordesign</small></span></a>
+      <a class="cbtn" href="#" aria-label="Add the official Facebook page URL"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg><span class="cl"><b>Facebook</b><small>Add official page link</small></span></a>
+      <a class="cbtn" href="#" aria-label="Add the official YouTube channel URL"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><path d="m10 8 6 4-6 4z"/></svg><span class="cl"><b>YouTube</b><small>Add official channel link</small></span></a>
+      <a class="cbtn" href="#" aria-label="Add the official LinkedIn page URL"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span class="cl"><b>LinkedIn</b><small>Add official company page</small></span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="text-center py-12 px-5">
+  <p class="font-display gold-text text-2xl font-bold tracking-widest">AR INTERIOR DESIGNING</p>
+  <p class="text-stone-300 text-xs sm:text-sm mt-3 tracking-[.2em]">MESSAGE YOUR DREAMS, OUR CARE</p>
+  <div class="w-32 h-px mx-auto my-6" style="background:linear-gradient(90deg,transparent,#d4af37,transparent)"></div>
+  <p class="text-sm"><a href="#home">Home</a> &nbsp; <a href="#about">About</a> &nbsp; <a href="#portfolio">Portfolio</a> &nbsp; <a href="#contact">Contact</a></p>
+  <p class="text-xs text-stone-500 mt-5">&copy; <span id="yr"></span> AR Interior Designing. All rights reserved.</p>
+</footer>
+
+<div id="lb" class="hidden" role="dialog" aria-modal="true" aria-label="Portfolio video preview">
+  <button aria-label="Close preview">&times;</button><div id="lbcontent"></div><p id="lbcap" class="font-display gold-text mt-5 text-xl text-center"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(() => {
+  'use strict';
+
+  const PHONE = '917569954319';
+  const WA = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent('Hi AR Interior Designing, I would like to book a consultation.');
+  document.querySelectorAll('[data-wa]').forEach(a => { a.href = WA; a.target = '_blank'; a.rel = 'noopener'; });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Accessible mobile navigation
+  const menuBtn = document.getElementById('menuBtn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.innerHTML = open ? '&times;' : '&#9776;';
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.innerHTML = '&#9776;';
+  }));
+
+  // Portfolio media
+  const works = [
+    {t:'Modular Kitchen',c:'Kitchen',v:'https://res.cloudinary.com/ofiyq8xe/video/upload/v1793981032/23332f509d467dc8e01c8fd25722ba4d.mp4'},
+    {t:'Grand Living Room',c:'Living',v:'https://res.cloudinary.com/ofiyq8xe/video/upload/v1793981146/actinse_ssspin.io_1793981096.mp4'},
+    {t:'Master Bedroom',c:'Bedroom',v:'https://res.cloudinary.com/ofiyq8xe/video/upload/v1793981244/lougenebinghay_ssspin.io_1793981226.mp4'},
+    {t:'Coffered False Ceiling',c:'Ceiling',v:'https://res.cloudinary.com/ofiyq8xe/video/upload/v1793981461/mudassarhussain0188_ssspin.io_1793981408.mp4'},
+    {t:'TV Unit Wall',c:'Living',v:'https://res.cloudinary.com/ofiyq8xe/video/upload/v1793981605/homecraafts_ssspin.io_1793981588.mp4'},
+    {t:'Modular Walk-in Wardrobe',c:'Bedroom',v:'https://res.cloudinary.com/ofiyq8xe/video/upload/v1793981767/IRYSTAVARESINTERIORES_ssspin.io_1793981708.mp4'}
+  ];
+  const grid = document.getElementById('grid');
+  grid.innerHTML = works.map((w,i) => `<article class="tile" data-c="${w.c}" data-i="${i}" tabindex="0" role="button" aria-label="View ${w.t}"><video src="${w.v}" autoplay muted loop playsinline preload="metadata"></video><span>${w.t}</span></article>`).join('');
+
+  document.getElementById('filters').addEventListener('click', e => {
+    const f = e.target.dataset.f;
+    if (!f) return;
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c === e.target));
+    grid.querySelectorAll('.tile').forEach(tile => tile.style.display = (f === 'all' || tile.dataset.c === f) ? '' : 'none');
+  });
+
+  // Portfolio lightbox
+  const lb = document.getElementById('lb');
+  const lbContent = document.getElementById('lbcontent');
+  const closeLightbox = () => { lb.classList.add('hidden'); lbContent.innerHTML = ''; };
+  function openWork(tile) {
+    const w = works[Number(tile.dataset.i)];
+    if (!w) return;
+    lbContent.innerHTML = `<video id="lbvideo" src="${w.v}" autoplay muted loop controls playsinline></video>`;
+    document.getElementById('lbcap').textContent = w.t;
+    lb.classList.remove('hidden');
+    lb.querySelector('button').focus();
+  }
+  grid.addEventListener('click', e => { const tile = e.target.closest('.tile'); if (tile) openWork(tile); });
+  grid.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { const tile = e.target.closest('.tile'); if (tile) { e.preventDefault(); openWork(tile); } } });
+  lb.addEventListener('click', e => { if (e.target === lb || e.target.tagName === 'BUTTON') closeLightbox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // Reviews: replace with verified customer-approved testimonials before launch.
+  const reviews = [
+    ['Ravi','Our kitchen was finished on schedule and looks better than the design we approved.'],
+    ['Client feedback','Exceptional attention to detail and a smooth interior execution experience.'],
+    ['Customer review','Thoughtful design choices and a beautiful finish throughout our home.']
+  ];
+  document.getElementById('rev').innerHTML = reviews.map(r => `<figure class="glass p-7"><p class="gold-text text-xl font-bold" aria-label="5 stars">★★★★★</p><blockquote class="my-4 text-base text-stone-200">${r[1]}</blockquote><figcaption class="font-display gold-text text-lg font-bold">${r[0]}</figcaption></figure>`).join('');
+
+  // Lightweight cursor trail on pointer devices only.
+  const orb = document.getElementById('orb');
+  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const dots = [];
+    for (let i=0;i<8;i++) {
+      const d = document.createElement('div'); d.className='trail'; d.style.opacity=String(1-i/9); document.body.appendChild(d);
+      dots.push({el:d,x:0,y:0});
+    }
+    let mx=innerWidth/2,my=innerHeight/2, raf=0;
+    addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;orb.style.left=mx+'px';orb.style.top=my+'px';},{passive:true});
+    const cursorLoop=()=>{
+      let x=mx,y=my;
+      dots.forEach(p=>{p.x+=(x-p.x)*.32;p.y+=(y-p.y)*.32;p.el.style.left=p.x+'px';p.el.style.top=p.y+'px';x=p.x;y=p.y;});
+      raf=requestAnimationFrame(cursorLoop);
+    };
+    cursorLoop();
+    document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else cursorLoop();});
+  } else { orb.style.display='none'; }
+
+  // Three.js gold dust background. Pauses when tab is hidden.
+  const canvas = document.getElementById('global-bg');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (canvas && window.THREE && !reduced) {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, .1, 500);
+    camera.position.z=55;
+    const renderer = new THREE.WebGLRenderer({canvas,alpha:true,antialias:false,powerPreference:'low-power'});
+    const mobile = matchMedia('(max-width:768px)').matches;
+    renderer.setPixelRatio(Math.min(devicePixelRatio||1,mobile?1:1.35));
+    const count=mobile?260:850, geometry=new THREE.BufferGeometry();
+    const positions=new Float32Array(count*3), speeds=new Float32Array(count), phases=new Float32Array(count);
+    for(let i=0;i<count;i++){
+      const k=i*3; positions[k]=(Math.random()-.5)*115; positions[k+1]=(Math.random()-.5)*115; positions[k+2]=(Math.random()-.5)*70;
+      speeds[i]=.018+Math.random()*.045; phases[i]=Math.random()*Math.PI*2;
+    }
+    geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));
+    const material=new THREE.PointsMaterial({color:0xf3dc8a,size:mobile?.2:.28,transparent:true,opacity:.48,depthWrite:false,blending:THREE.AdditiveBlending});
+    scene.add(new THREE.Points(geometry,material));
+    let targetX=0,targetY=0,raf=null,active=true;
+    const resize=()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight,false);};
+    resize(); addEventListener('resize',resize,{passive:true});
+    addEventListener('mousemove',e=>{targetX=(e.clientX/innerWidth-.5)*4;targetY=(e.clientY/innerHeight-.5)*4;},{passive:true});
+    const animate=()=>{
+      if(!active||document.hidden){raf=null;return;}
+      const p=geometry.attributes.position.array,t=performance.now()*.00035;
+      for(let i=0;i<count;i++){const k=i*3;p[k+1]+=speeds[i];p[k]+=(Math.sin(t+phases[i])*.006);if(p[k+1]>58){p[k+1]=-58;p[k]=(Math.random()-.5)*115;}}
+      geometry.attributes.position.needsUpdate=true;
+      camera.position.x+=(targetX-camera.position.x)*.025;camera.position.y+=(-targetY-camera.position.y)*.025;camera.lookAt(scene.position);
+      renderer.render(scene,camera);raf=requestAnimationFrame(animate);
+    };
+    const start=()=>{if(active&&!document.hidden&&raf===null)raf=requestAnimationFrame(animate);};
+    const stop=()=>{if(raf!==null){cancelAnimationFrame(raf);raf=null;}};
+    document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+    addEventListener('pagehide',()=>{active=false;stop();geometry.dispose();material.dispose();renderer.dispose();},{once:true});
+    start();
+  }
+
+  // Entrance animation and counters
+  const preloader=document.getElementById('preloader');
+  const progress=document.querySelector('.loader-progress');
+  const percent=document.querySelector('.loader-percent');
+  const finishLoading=()=>{
+    if(!window.gsap || reduced){preloader.style.display='none';return;}
+    const counter={value:0};
+    gsap.to(counter,{value:100,duration:1.65,ease:'power2.out',onUpdate:()=>{
+      const n=Math.round(counter.value);progress.style.width=n+'%';percent.textContent=n+'%';
+    },onComplete:()=>{
+      gsap.to('.preloader-content',{scale:.88,opacity:0,duration:.35,ease:'power2.in',onComplete:()=>{
+        gsap.to(preloader,{opacity:0,duration:.55,ease:'power2.inOut',onComplete:()=>{preloader.style.display='none';preloader.setAttribute('aria-hidden','true');animateHero();}});
+      }});
+    }});
+  };
+  const animateHero=()=>{
+    if(!window.gsap)return;
+    gsap.fromTo('.hero-kicker, #home h1, #home p, #home .btn',{y:35,opacity:0},{y:0,opacity:1,stagger:.14,duration:1,ease:'power3.out',clearProps:'transform'});
+  };
+  if(document.readyState==='complete')finishLoading();else window.addEventListener('load',finishLoading,{once:true});
+  if(window.gsap && window.ScrollTrigger && !reduced){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.sec h2, .rv, .glass').forEach(el=>{
+      if(el.closest('#home'))return;
+      gsap.fromTo(el,{y:28,opacity:0},{y:0,opacity:1,duration:.85,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+    });
+    document.querySelectorAll('.count').forEach(el=>{
+      const obj={v:0};
+      gsap.to(obj,{v:Number(el.dataset.n)||0,duration:1.7,ease:'power1.out',scrollTrigger:{trigger:el,start:'top 90%',once:true},onUpdate:()=>el.textContent=Math.round(obj.v)});
+    });
+  } else {
+    document.querySelectorAll('.count').forEach(el=>el.textContent=el.dataset.n||'0');
+  }
+})();
+</script>
+</body>
+</html>
